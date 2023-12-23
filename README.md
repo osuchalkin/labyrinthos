@@ -15,7 +15,7 @@ https://opengameart.org/content/black-brick-wall-512px
 https://opengameart.org/content/dark-brick-wall-seamless-texture-with-normalmap-darkwallsjpg  
 
 ### Game
-F1 or H - this help  
+F1 or H - help  
 F2 - save the game  
 F3 - load the game  
 ESC - save and exit  
