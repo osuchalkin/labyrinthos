@@ -13,8 +13,9 @@ class Settings3d:
     """Game settings"""
 
     def __init__(self):
-        # screen
-        self.RES = self.WIDTH, self.HEIGHT = 1600, 1000
+        # full screen
+        self.RES = self.WIDTH, self.HEIGHT = pg.display.Info().current_w, pg.display.Info().current_h
+        # another: self.RES = self.WIDTH, self.HEIGHT = 1600, 1000
         self.HALF_WIDTH = self.WIDTH // 2
         self.HALF_HEIGHT = self.HEIGHT // 2
 

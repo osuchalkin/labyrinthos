@@ -17,7 +17,8 @@ class Game(Game3d):
         self.data.start_work()
         pg.mouse.set_visible(True)
         self.settings = Settings()
-        self.screen = pg.display.set_mode(self.settings.RES)
+        self.screen = pg.display.set_mode((0, 0), pg.FULLSCREEN)
+        # not fullscreen mode: self.screen = pg.display.set_mode(self.settings.RES)
         pg.display.set_caption(self.settings.caption)
         pg.display.set_icon(pg.image.load(self.settings.ico))
         self.level = 0
