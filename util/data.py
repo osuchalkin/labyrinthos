@@ -1,4 +1,5 @@
 import shutil
+import pickle
 
 
 class Data:
@@ -15,3 +16,19 @@ class Data:
 
     def end_work(self):
         shutil.rmtree(self.directory)
+
+
+class TextBinary:
+    """Saving data as a binary file and loading data from binary file"""
+    def __init__(self, data, file):
+        self.data = data
+        self.file = file
+
+    def save_data(self):
+        with open(self.file, "wb") as f:
+            pickle.dump(self.data, f)
+
+    def load_data(self):
+        with open(self.file, "rb") as f:
+            self.data = pickle.load(f)
+            return self.data

@@ -1,4 +1,3 @@
-import json
 import sys
 
 from map import Map, MapSaved
@@ -8,7 +7,7 @@ from sound import Sound
 from text import Text
 from textures import ObjectRenderer
 from util.pseudo3d import *
-from util.data import Data
+from util.data import *
 
 
 class Game(Game3d):
@@ -77,14 +76,13 @@ class Game(Game3d):
             'wall': self.object_renderer.wall
         }
         name = self.player_name + '.sav'
-        with open(name, "w") as f:
-            json.dump(self.parameters, f)
+        saving_file = TextBinary(self.parameters, name)
+        saving_file.save_data()
 
     def load_game(self):
         name = self._find_files()
-
-        with open(name, "r") as f:
-            self.parameters = json.load(f)
+        loading_file = TextBinary(self.parameters, name)
+        self.parameters = loading_file.load_data()
 
         self.player_name = name[:-4]
         self.level = self.parameters['level']
