@@ -18,7 +18,7 @@ All 3D-geometry, player's configuration and others are in util/pseudo3d.py.
 Also there are auxiliary files for text images and working with archives.  
 
 File data.dat is a zip-archive which stored textures, sprites, sounds.   
-The game unpack archive to directory and delete it in the end of the game.
+The game unpacks archive to directory and deletes it in the end of the game.
 
 ### Game
 The 1st labyrinth is a Knossos' labyrinth. It means it has one enter and the same exit.  
